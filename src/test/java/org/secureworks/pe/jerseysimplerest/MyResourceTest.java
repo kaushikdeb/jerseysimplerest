@@ -45,7 +45,7 @@ public class MyResourceTest {
     @Test
     public void testGetMd5() {
         String responseMsg = target.path("md5/ILoveJava").request().get(String.class);
-        assertEquals("<html><h2>md5=35454B055CC325EA1AF2126E27707052</h1></html>", responseMsg);
+        assertEquals("<html><h2>text=ILoveJava, md5=35454B055CC325EA1AF2126E27707052</h1></html>", responseMsg);
     }
     
     
@@ -55,6 +55,6 @@ public class MyResourceTest {
     @Test
     public void testGetSha() {
         String responseMsg = target.path("sha/ILoveJava").request().get(String.class);
-        assertEquals("<html><h2>md5=D2F05B425E4D869FD963F32200F7117D69A98A0F</h1></html>", responseMsg);
+        assertEquals("<html><h2>text=ILoveJava, sha=D2F05B425E4D869FD963F32200F7117D69A98A0F</h1></html>", responseMsg);
     }
 }

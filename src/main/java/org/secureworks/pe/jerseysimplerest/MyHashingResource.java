@@ -23,7 +23,7 @@ public class MyHashingResource {
     @Path("md5/{text}")
     @Produces(MediaType.TEXT_HTML)
     public String getMd5(@PathParam("text") String text) {
-        return "<html><h2>md5=" + TextToHash.getMd5forText(text) +"</h1></html>";
+        return "<html><h2>text=" + text + ", md5=" + TextToHash.getMd5forText(text) +"</h1></html>";
     }
     
     
@@ -37,7 +37,7 @@ public class MyHashingResource {
     @Path("sha/{text}")
     @Produces(MediaType.TEXT_HTML)
     public String getSha(@PathParam("text") String text) {
-        return "<html><h2>md5=" + TextToHash.getShaforText(text) +"</h1></html>";
+        return "<html><h2>text=" + text + ", sha=" + TextToHash.getShaforText(text) +"</h1></html>";
     }
     
     
